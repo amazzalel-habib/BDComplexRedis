@@ -1,5 +1,5 @@
 import redis
-import random as r
+import random as rd
 from datetime import datetime,timedelta
 r = redis.Redis(host='localhost',port=6379,charset='utf-8',decode_responses=True)
 
@@ -22,13 +22,13 @@ for i in range(numOfUsers):
 	for j in range(numOfCompteurPerClient):
 		compteurID = 'COM'+str(i+1)+'-'+str(j+1)
 		compteursDetails[compteurID+'Adresse'] = 'Avenue X '+str(i+1)+str(j+1)+' RABAT'
-		numOfCons = r.randint(10,100)
+		numOfCons = rd.randint(10,100)
 		dateNow = datetime.now()
 		startDate = dateNow-timedelta(days=5)
 		consommations = []
 		for _ in range(numOfCons):
 			date = startDate + timedelta(minutes=30)
-			valeur = float('{:.2f}'.format(r.random()*10))
+			valeur = float('{:.2f}'.format(rd.random()*10))
 			startDate = date
 			consommations.append(date.strftime('%Y-%m-%d %H:%M:%S.%f'))
 			consommations.append(valeur)

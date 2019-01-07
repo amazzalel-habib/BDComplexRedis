@@ -36,7 +36,7 @@ class Extractor:
 		adresse = self.r.get(compteurId+'Adresse')#"Adresse rabat"
 		cons = self.r.lrange(compteurId,0,100)#['2012-10-12 10:00:00.0000000',0.2,'2012-10-12 10:30:00.0000000',0.6]
 		consommations = []
-		for i in range(0,len(cons),2):
+		for i in range(0,len(cons)-2,2):
 			date = cons[i+1]
 			valeur = cons[i]
 			consommation = Consommation(date,valeur)
