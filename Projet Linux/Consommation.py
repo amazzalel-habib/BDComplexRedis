@@ -1,4 +1,7 @@
 from datetime import datetime
+"""
+	Classe Consommation (Model)
+"""
 class Consommation:
 	def __init__(self,date,valeur):
 		datetime_object = self.parse_prefix(date, '%Y-%m-%d %H:%M:%S.%f')

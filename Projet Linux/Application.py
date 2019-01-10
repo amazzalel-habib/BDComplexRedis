@@ -4,7 +4,9 @@ from User import User
 from Consommation import Consommation
 from datetime import datetime,timedelta
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+"""
+Cette module contient le code concernant l'interface graphique
+"""
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

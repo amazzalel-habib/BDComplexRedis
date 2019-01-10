@@ -1,4 +1,6 @@
-
+"""
+	Classe User (Model)
+"""
 class User:
 	def __init__(self,id,name,cat,compteurs):
 		self.id = id
